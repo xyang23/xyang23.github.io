@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Xuelin Yang</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Xuelin Yang is a Ph.D. student in Statistics at UC Berkeley.">
+    <meta name="keywords" content="Xuelin Yang,Machine Learning,Statistics,Econometrics">
+    <meta name="google-site-verification" content="pOjgSghtIOGkTrlfN9U3ox-ypY5OENWbadJld2nITAQ" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+body{margin:0;padding:0;}
+a{color:#4e613e}
+a:hover{color:#566c7f}
+#background{position:fixed;top:0;overflow:hidden;height:0}
+#wave-canvas{display:block;position:relative;top:0;left:5%;width:55%;min-width:850px;height:150px;border:0}
+/*#main{z-index:2;margin:0 auto;position:absolute;padding-top:5%;width:100%;min-width:240px;text-align:center;background-color:rgb(254,250,246)}*/
+#main{margin:0 auto;padding:45px 30px 15px;width:100%;min-width:240px;text-align:center;background-color:rgb(250,255,254)}
+
+.main-content{padding:0;text-align:center;cursor:default;text-align:center;}
+/*#main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
+/*.main-content{margin-left:6.5104167%;width:86.9791667%;}*/
+@media (min-width: 768px) {
+    .main-content{width:66%;min-width:668px;margin:auto;}
+}
+@media (min-width: 1200px) {
+    .main-content{width:66%;max-width:900px;margin:auto;}
+}
+/*.main-content {
+    width:86.9791667%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .main-content{width:66%;min-width:668px;}
+}
+@media (min-width: 1200px) {
+    .main-content{width:66%;max-width:900px;}
+}*/
+/* Avatar, Name, etc. */
+#main-content-container{margin:0 auto;padding:15px 0 0;max-width:1080px;}
+@media (min-width: 768px) {
+    #main-content-container{padding:15px 0;}
+}
+#main-content-container .col-avatar{text-align:center}
+@media (min-width: 768px) {
+    #main-content-container .col-avatar{text-align:center}
+}
+#main-content-container .col-avatar .avatar{z-index:100;width:150px;height:150px;margin-top:0px;border-radius:100%;box-shadow:0 0 0 0.3em #eee;opacity:1;}
+
+#main-content-container .col-info{height:100%;align-items:center;}
+#main-info-container{padding-top:15px}
+#main-info-container .col-name{text-align:center;margin-top:30px}
+@media (min-width: 768px) {
+    #main-info-container .col-name{text-align:left;margin-top:0;}
+}
+#main-info-container .col-name .text{text-align:left}
+#main-info-container .col-name .name{margin:0;color:#566c7f;font-size:1.85em;font-family:"Source Sans Pro",Helvetica,sans-serif}
+#main-info-container .col-name .email{color:#666; font-size:14px}
+#main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
+#main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
+#main-info-container .col-link li {display:inline-block;margin:auto;padding:0 10px;color:#ccc;line-height:10px}
+#main-info-container .col-link li a{width:45px;height:45px;color:#ccc;padding:0;font-size:45px;line-height:45px}
+#main-info-container .col-link li a:focus,
+#main-info-container .col-link li a:hover{text-decoration:none;cursor:hand}
+#main-info-container .col-link li a.border{border:1px solid #ccc;border-radius:100%;}
+#main-info-container .col-link li a.padding{padding:0px 0px;font-size:22px}
+
+/* Other */
+.main-more-container{width:100%;padding:0 30px}
+
+.main-bio-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
+.main-bio-container .subtitle{margin-top:0px;color:#566c7f}
+
+.main-other-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
+.main-other-container .subtitle{margin-top:0px;color:#566c7f}
+
+#main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px}
+#main-pub-container .subtitle{color:#566c7f;}
+#main-pub-container .subtitle a {font-weight:400;font-size:18px}
+#main-pub-container .subtitle a.activated {color:#333333}
+#main-pub-container .subtitle a.activated:focus,
+#main-pub-container .subtitle a.activated:hover {text-decoration:none;cursor:initial}
+
+#main-pub-container .subtitle-aux {font-size:1rem}
+#main-pub-container .subtitle-aux a.activated {color:#333333}
+#main-pub-container .subtitle-aux a.activated:focus,
+#main-pub-container .subtitle-aux a.activated:hover {text-decoration:none;cursor:initial}
+#main-pub-container .subtitle-aux .note{margin-left:1em;color:#999999;text-decoration:none;font-size:14px}
+
+#main-pub-card-container{}
+#main-pub-card-container>h5{margin-bottom: 20px}
+#main-pub-card-container .pub-card{width: 100%;padding-bottom:15px;font-size:1rem}
+#main-pub-card-container .pub-card .col-l{text-align:center;padding-top:10px}
+#main-pub-card-container .pub-card .col-r{padding-top:10px}
+#main-pub-card-container .pub-card img{width:100%;margin:0 auto}
+#main-pub-card-container .pub-card-body{width:100%;background:transparent;padding-left:0px}
+#main-pub-card-container .pub-card .title{font-weight:600;font-size:1rem;margin-bottom:4px;line-height:1.4}
+#main-pub-card-container .pub-card .authors{font-weight:400;color:#666666;margin-bottom:4px;line-height:1.4}
+#main-pub-card-container .pub-card .authors a{color:#666666}
+#main-pub-card-container .pub-card .authors u{color:#333333;font-weight:600;text-decoration:none}
+#main-pub-card-container .pub-card .conference{color:#333333;font-weight:600}
+#main-pub-card-container .pub-card .note{display:block;color:#999999;text-decoration:none;font-size:14px}
+#main-pub-card-container .pub-card .info{margin-bottom:0;}
+#main-pub-card-container .row{margin:0}
+#main-pub-card-container .col-l,
+#main-pub-card-container .col-r{vertical-align:top;display:inline-block;margin:0;padding-left:0px}
+
+#footer{padding:1.5em 0 1.5em;min-width:240px;background:#fff;font-size:14px;line-height:12px;text-align:left}
+#footer .container{max-width:540px;padding:0 45px}
+#footer .row{align-items:center}
+#footer .stat{width:90px;overflow:hidden;margin:0 auto;padding:0 15px;}
+#footer .copyright{flex-grow:1;margin:5px auto 5px;text-align:left;display:block;font-size:14px;line-height:1.4}
+#footer a{color:#666666}
+#footer a:hover{color:#333333}
+
+.bold{font-weight:600}
+.highlight{color:#BB2222;font-weight:600}
+.highlight:hover{color:#BB2222;font-weight:600}
+.hide{display:none}
+    </style>
+</head>
+
+<body>
+
+<!--img src="static/img/hal-gatewood.jpg" id="background" class="" /-->
+
+<div id="main">
+    <!--canvas id="wave-canvas"></canvas-->
+    <div class="main-content">
+        <div id="main-content-container" class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-avatar">
+                    <img src="static/img/avatar0.jpeg" class="avatar" />
+                </div>
+                <div class="col-sm-12 col-md-9">
+                    <div id="main-info-container">
+                            <div class="col-name">
+                                    <h1 class="name"><span>Xuelin Yang</span></h1>
+                                    <p class="email">Email: xuelin [at] berkeley [dot] edu / <a href="https://www.linkedin.com/in/xuelin-yang-42b9451a3/">LinkedIn</a> / <a href="https://scholar.google.com/citations?user=ehOhWRwAAAAJ&hl=en">Google Scholar</a> / <a href="https://statistics.berkeley.edu/people/xuelin-yang">Berkeley profile</a> </p>
+                                    <!-- / <a href="data/Xuelin_cv.pdf">CV</a> -->
+                                    <p class="text">
+                                    I am a first-year Ph.D. student in <a href="https://statistics.berkeley.edu/about/overview">Statistics</a> at <a href="https://www.berkeley.edu">UC Berkeley</a>.
+                                    Previously, I graduated from <a href="http://stanford.edu">Stanford University</a> with a Bachelor's degree in Mathematics and a concurrent Master's degree in Computer Science.  </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="main-more-container">
+        <div class="main-bio-container">
+            <h5 class="subtitle" style="margin-top:5px">Research</h5>
+            <p>
+                My research interest lies broadly in <b>theoretical statistics and econometrics</b>.  </p>
+            <p>
+                To junior students: I devote 30 mins weekly to chat about research and career in general. I encourage you to reach out and will prioritize underrepresented groups.</p>
+        </div>
+    </div>
+
+    <div class="main-more-container">
+        <div id="main-pub-container">
+            <h5 class="subtitle">Publications
+<!--             (
+                <a id="publication-by-selected" href="javascript:;", onClick="publicationBySelected();">show selected</a> /
+                <a id="publication-by-date" href="javascript:;", onClick="publicationByDate();">show all by date</a> /
+                <a id="publication-by-topic" href="javascript:;", onClick="publicationByTopic();">show all by topic</a>
+            ) -->
+            </h5>
+<!--             <p class="subtitle-aux"><span class="bold">Topics:</span>
+                <a href="#topic-concept-learning" onClick="return publicationByTopicSpecific(this)" data-topic="concept-learning">Concept Learning and Language Acquisition</a> /
+                <a href="#topic-reasoning-planning" onClick="return publicationByTopicSpecific(this)" data-topic="reasoning-planning">Reasoning and Planning</a> /
+                <a href="#topic-scene-understanding" onClick="return publicationByTopicSpecific(this)" data-topic="scene-understanding">Scene and Activity Understanding</a> /
+                <a href="#topic-vision" onClick="return publicationByTopicSpecific(this)" data-topic="vision">Others: Vision</a> /
+                <a href="#topic-nlp" onClick="return publicationByTopicSpecific(this)" data-topic="nlp">Others: NLP</a>
+                <span class="note">(*/†: indicates equal contribution.)</span>
+            </p> -->
+            <div id="main-pub-card-container" class="activated hide">
+                <div class="pub-card" data-topic="concept-learning" data-year="2022" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="data/projects/clevrer-humans.gif" width="100%" />
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">CLEVRER-Humans: Describing Physical and Causal Events the Human Way</h5>
+                                <h6 class="authors">
+                                    <a href="https://jiayuanm.com/">Jiayuan Mao</a>*,
+                                    <u>Xuelin Yang</u>*,
+                                    <a href="https://xikunzhang.github.io">Xikun Zhang</a>,
+                                    <a href="https://cocolab.stanford.edu/ndg">Noah D. Goodman</a>,
+                                    <a href="https://jiajunwu.com">Jiajun Wu</a>
+                                </h6>
+                                <p class="info">
+                                    <a href="https://neurips.cc/Conferences/2022/" class="conference">NeurIPS 2022 (Datasets and Benchmarks Track)</a>
+                                    [<a href="https://openreview.net/pdf?id=sd1fv0g3UO1">Paper</a> /
+                                    <a href="https://sites.google.com/stanford.edu/clevrer-humans">Project Page</a> /
+                                    <a href="https://github.com/xyang23/CLEVRER-Humans1.0">Code</a>]
+                                    <span class="note">(*: Equal Contribution. Alphabetical order.)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="reasoning-planning" data-year="2022" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="data/projects/fastcph.png" width="100%" />
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">FastCPH: Efficient Survival Analysis for Neural Networks</h5>
+                                <h6 class="authors">
+                                    <u>Xuelin Yang</u>,
+                                    <a href="https://louisabraham.github.io">Louis Abraham</a>,
+                                    <a href="https://www.linkedin.com/in/sejinkim3/?originalSubdomain=ca">Sejin Kim</a>,
+                                    <a href="https://psmirnov.com">Petr Smirnov</a>,
+                                    <a href="https://fengruan.github.io">Feng Ruan</a>,
+                                    <a href="https://medbio.utoronto.ca/faculty/haibe-kains">Benjamin Haibe-Kains</a>,
+                                    <a href="http://tibshirani.su.domains">Robert Tibshirani</a>
+                                </h6>
+                                <p class="info">
+                                    <a href="https://neurips.cc/Conferences/2022/" class="conference">NeurIPS 2022</a>
+                                    <a href="http://timeseriesforhealth.github.io">Workshop on Learning from Time Series for Health</a> & <a href="https://hity-workshop.github.io/NeurIPS2022/">Workshop on Algorithmic Efficiency in Practical Neural Network Training</a>
+                                    [<a href="https://arxiv.org/abs/2208.09793">Paper</a> /
+                                    <a href="https://github.com/lasso-net/lassonet">Code</a>]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="reasoning-planning" data-year="2022" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="data/projects/ZeroC.png" width="100%" />
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">ZeroC: A Neuro-Symbolic Model for Zero-shot Concept Recognition and Acquisition at Inference Time</h5>
+                                <h6 class="authors">
+                                    <a href="https://tailin.org">Tailin Wu</a>,
+                                    <a href="https://megantj.com">Megan Tjandrasuwita</a>,
+                                    <a href="https://zen-wu.social">Zhengxuan Wu</a>,
+                                    <u>Xuelin Yang</u>,
+                                    <a href="https://kliu.io">Kevin Liu</a>,
+                                    <a href="https://scholar.google.com/citations?user=xlZ4YJcAAAAJ&hl=en">Rok Sosič</a>,
+                                    <a href="https://cs.stanford.edu/people/jure/">Jure Leskovec</a>
+                                </h6>
+                                <p class="info">
+                                    <a href="https://neurips.cc/Conferences/2022/" class="conference">NeurIPS 2022</a>
+                                    & <a href="https://icml.cc/Conferences/2022" class="conference">ICML 2022</a> <a href="https://beyond-bayes.github.io">Beyond Bayes: Paths Towards Universal Reasoning Systems Workshop</a>
+                                    [<a href="https://arxiv.org/abs/2206.15049">Paper</a> /
+                                    <a href="https://snap.stanford.edu/zeroc/">Project Page</a> / 
+                                    <a href="https://github.com/snap-stanford/zeroc">Code</a>]
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-more-container">
+        <div class="main-other-container">
+            <h5 class="subtitle" style="margin-top:0px">Experience</h5>
+            <ul>
+            <li>Research Assistant, <a href="https://statistics.stanford.edu">Stanford Statistics</a> (advised by Prof. <a href="https://tibshirani.su.domains", target="_blank">Robert Tibshirani</a>), 01/2022 – Present</li>
+            <li>Research Assistant, <a href="https://www.csail.mit.edu">MIT CSAIL</a> (advised by Prof. <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>), 06/2022 – 03/2023</li>
+            <li>Research Assistant, <a href="https://ai.stanford.edu">Stanford AI Lab</a> (advised by Prof. <a href="https://jiajunwu.com", target="_blank">Jiajun Wu</a>), 06/2021 – 06/2022</li>
+            <li>Research Assistant, <a href="https://snap.stanford.edu">(Stanford) SNAP</a> (advised by Prof. <a href="https://cs.stanford.edu/people/jure/", target="_blank">Jure Leskovec</a>), 09/2020 – 06/2021</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-more-container">
+        <div class="main-other-container">
+            <h5 class="subtitle" style="margin-top:0px">Distinctions</h5>
+            <p>
+            Candidate, <b>Tau Beta Pi (TBP) Engineering Honor Society</b>, 2023 (top fifth of all seniors in the School of Engineering at Stanford based on GPA) <br>
+            Second place at Stanford, <b>Jane Street Estimathon</b>, 2020 (top 2 out of 20) <br>
+            3rd Place Award in System Software, <b>Intel International Science and Engineering Fair</b>, 2018 (top 10% out of 1800, state’s best record in 8 years, the world’s largest pre-college STEM competition) <br>
+            First Prize, <b>Provincial Adolescent Science and Technology Innovation Contest</b>, 2018 (top 5 out of 400 in the province) <br>
+            Best High School Student of the Year, awarded by All-China Students' Federation, 2017 (top 10 out of 170k in the country) <br>
+            Bronze Award in World’s Final, <b>Shing-Tung Yau Science Award</b>, 2017 (top 0.5% out of 5800, Chinese largest STEM competition) <br>
+            Meritorious, <b>International Mathematical Modelling Challenge</b>, 2016 (top 10 out of 300 in the country)
+            </p>
+        </div>
+    </div>
+
+    <div class="main-more-container">
+        <div class="main-other-container">
+            <h5 class="subtitle" style="margin-top:0px">Education</h5>
+            <ul>
+            <li>Ph.D. student, UC Berkeley, Statistics, 2023-Present </li>
+            <li>M.S., Stanford University, Computer Science, 2021-2023</li>
+            <li>B.S., Stanford University, Mathematics, 2019-2023</li>
+            
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="stat">
+                    <!-- <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=-23A1GPVvvuNiuBYLygGVwg1KDr82CpUn5H3v7m6J9s"></script> -->
+                    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=6jUeCUZs-GXzzLncpP-TA3rxAPDJWWsl_u3QAlSEoOU"></script>
+                    <!--script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=-23A1GPVvvuNiuBYLygGVwg1KDr82CpUn5H3v7m6J9s&cl=ffffff&w=a"></script-->
+                </div>
+                <div class="copyright">
+                    &copy; 2024 Xuelin Yang. Template credit to Jiayuan Mao.<br />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="static/js/jquery.color.min.js"></script>
+<script type="text/javascript" src="static/js/wave.js"></script>
+<script type="text/javascript">
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+var allPublications = null;
+
+function publicationBySelected() {
+    var a = $("#publication-by-selected")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#main-pub-card-container").html("");
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        var pub = $(allPublications[pubId]);
+        if (pub.data("selected") == true) {
+            $("#main-pub-card-container").append(pub);
+        }
+    }
+}
+
+function publicationByDate() {
+    var a = $("#publication-by-date")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#main-pub-card-container").html("");
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        if (pubId == 0 || $(allPublications[pubId-1]).data("year") != $(allPublications[pubId]).data("year")) {
+            var year = $(allPublications[pubId]).data("year");
+            $("#main-pub-card-container").append($("<h5 id='year-" + year.toString() + "'>" + year.toString() + "</h5>"));
+        }
+        $("#main-pub-card-container").append(allPublications[pubId]);
+    }
+}
+
+function publicationByTopicInner() {
+    var a = $("#publication-by-topic")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+    $("#main-pub-container .subtitle a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#main-pub-card-container").html("");
+    for (var topicId in allTopics) {
+        var topic = allTopics[topicId].name;
+        var topicTitle = allTopics[topicId].title;
+        // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
+        $("#main-pub-card-container").append($("<h5 id='topic-" + topic + "'>" + topicTitle + "</h5>"));
+        for (var pubId = 0; pubId < allPublications.length; pubId++) {
+            var pub = $(allPublications[pubId]);
+            if (pub.data("topic").indexOf(topic) != -1) {
+                $("#main-pub-card-container").append(pub);
+            }
+        }
+    }
+}
+
+function publicationByTopicSpecificInner(a) {
+    if ($(a).hasClass("activated")) {
+        return false;
+    }
+
+    $("#main-pub-container .subtitle-aux a").removeClass("activated");
+    $(a).addClass("activated");
+}
+
+function publicationByTopic() {
+    publicationByTopicInner();
+    publicationByTopicSpecificInner($("#main-pub-container .subtitle-aux a:first"));
+    return true;
+}
+
+function publicationByTopicSpecific(a) {
+    publicationByTopicInner();
+    publicationByTopicSpecificInner(a);
+
+    var hash = a.hash;
+    $(hash).prop('id', hash.substr(1) + '-noscroll');
+    window.location.hash = hash;
+    $(hash + '-noscroll').prop('id', hash.substr(1));
+
+    if (!$(hash).isInViewport()) {
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1000, function(){
+        });
+    }
+
+    return false;
+}
+
+$(function() {
+    getRealSize = function(bgImg) {
+        var img = new Image();
+        img.src = bgImg.attr("src");
+        var width = img.width,
+            height = img.height;
+        return {
+            width: width,
+            height: height
+        }
+    };
+
+    getRealWindowSize = function() {
+        var winWidth = null,
+            winHeight = null;
+        if (window.innerWidth) winWidth = window.innerWidth;
+        else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
+        if (window.innerHeight) winHeight = window.innerHeight;
+        else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
+        if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+            winHeight = document.documentElement.clientHeight;
+            winWidth = document.documentElement.clientWidth
+        }
+        return {
+            width: winWidth,
+            height: winHeight
+        }
+    };
+
+    fullBg = function() {
+        var bgImg = $("#background");
+        var mainContainer = $("#main");
+        var firstFire = null;
+
+        function resizeImg() {
+            var realSize = getRealSize(bgImg);
+            var imgWidth = realSize.width;
+            var imgHeight = realSize.height;
+
+            if (imgWidth == 0 || imgHeight == 0) {
+                setTimeout(function() {
+                    resizeImg();
+                }, 200);
+            }
+
+            console.log(realSize);
+            var realWinSize = getRealWindowSize();
+            var winWidth = realWinSize.width;
+            var winHeight = realWinSize.height;
+            var widthRatio = winWidth / imgWidth;
+            var heightRatio = winHeight / imgHeight;
+            console.log(realWinSize);
+            if (widthRatio > heightRatio) {
+                bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({'top':
+                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'})
+            } else {
+                bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({'left':
+                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'})
+            }
+            // mainContainer.css({
+            //     width: winWidth,
+            //     height: winHeight
+            // });
+        }
+
+        resizeImg();
+        window.onresize = function() {
+            if (firstFire === null) {
+                firstFire = setTimeout(function() {
+                    resizeImg();
+                    firstFire = null
+                }, 100)
+            }
+        }
+    };
+
+    targetColor = $("#main-content-container .name").css("color");
+    animatedLink = function(speed) {
+        $("#main-content-container .col-link li").hover(function() {
+            $(this).find('.icon').animate({
+                color: targetColor,
+                borderColor: targetColor
+            }, speed);
+            $(this).find('.caption').animate({
+                color: targetColor
+            })
+        }, function() {
+            $(this).find('.icon').animate({
+                borderColor: '#cccccc',
+                color: '#cccccc'
+            }, speed);
+            $(this).find('.caption').animate({
+                color: '#cccccc'
+            })
+        })
+    };
+
+    fullBg();
+    animatedLink(400);
+
+    allPublications = $("#main-pub-card-container .pub-card");
+    allTopicsLink = $("#main-pub-container .subtitle-aux a");
+    allTopics = [];
+    for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
+        allTopics.push({name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html()});
+    }
+
+    $("#publication-by-selected").click();
+    // $("#publication-by-date").click();
+    $("#main-pub-card-container").removeClass("hide");
+});
+</script>
+</body>
+</html>
