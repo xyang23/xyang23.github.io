@@ -145,10 +145,11 @@ a:hover{color:#566c7f}
                     <div id="main-info-container">
                             <div class="col-name">
                                     <h1 class="name"><span>Xuelin Yang</span></h1>
-                                    <p class="email">Email: xuelin [at] berkeley [dot] edu <br> <a href="https://scholar.google.com/citations?user=ehOhWRwAAAAJ&hl=en">Google Scholar</a> / <a href="https://statistics.berkeley.edu/people/xuelin-yang">Berkeley profile</a> / <a href="https://www.linkedin.com/in/xuelin-yang-42b9451a3/">LinkedIn</a> </p>
-                                    <!-- / <a href="data/Xuelin_cv.pdf">CV</a> / <a href="https://x.com/xuelin_y">Twitter</a> / <a href="https://bsky.app/profile/xuelin.bsky.social">Bluesky</a> -->
+                                    <p class="email">Email: xuelin [at] berkeley [dot] edu 
+                                    <!-- <br> <a href="https://scholar.google.com/citations?user=ehOhWRwAAAAJ&hl=en">Google Scholar</a> / <a href="https://statistics.berkeley.edu/people/xuelin-yang">Berkeley profile</a>  </p> -->
+                                    <!-- / <a href="data/Xuelin_cv.pdf">CV</a> / <a href="https://x.com/xuelin_y">Twitter</a> / <a href="https://bsky.app/profile/xuelin.bsky.social">Bluesky</a> / <a href="https://www.linkedin.com/in/xuelin-yang-42b9451a3/">LinkedIn</a>-->
                                     <p class="text"> 
-                                    I am a Ph.D. student in <a href="https://statistics.berkeley.edu/about/overview">Statistics at UC Berkeley</a> advised by Professors <a href="https://people.eecs.berkeley.edu/~jordan/">Michael I. Jordan</a> and 
+                                    I am a Ph.D. candidate in <a href="https://statistics.berkeley.edu/about/overview">Statistics at UC Berkeley</a> advised by Professors <a href="https://people.eecs.berkeley.edu/~jordan/">Michael I. Jordan</a> and 
                                     <a href="https://gsb-faculty.stanford.edu/guido-w-imbens">Guido Imbens</a>.
                                     Previously, I graduated from Stanford University with a Bachelor's degree in Mathematics and a concurrent Master's degree in Computer Science.  </p>
                             </div>
@@ -179,8 +180,9 @@ a:hover{color:#566c7f}
         <div id="main-pub-container">
             <h5 class="subtitle">Papers 
                 (<a id="publication-by-selected" href="javascript:;", onClick="publicationBySelected();">show selected papers</a> /
+                <a id="publication-by-topic" href="javascript:;", onClick="publicationByTopic();">show all by topic</a> / 
                 <a id="publication-by-date" href="javascript:;", onClick="publicationByDate();">show all by date</a> /
-                <a id="publication-by-topic" href="javascript:;", onClick="publicationByTopic();">show all by topic</a>)
+                <a href="https://scholar.google.com/citations?user=ehOhWRwAAAAJ&hl=en">Google Scholar</a> )
             </h5>
             <!-- <span class="text">*: Equal Contribution. (&alpha;-&beta;): Alphabetical order.<br></span> -->
             <span class="text"> (&alpha;-&beta;) denotes alphabetical order. Asterisk (*) denotes equal contribution.<br></span>
@@ -195,6 +197,29 @@ a:hover{color:#566c7f}
             
             <div id="main-pub-card-container" class="activated hide">
                 <!-- <span class="note">*: Equal Contribution. (&alpha;-&beta;): Alphabetical order. </span> -->
+
+            <div class="pub-card" data-topic="statistics" data-year="2026" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="data/projects/picpi.pdf" width="100%" />
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">PICPIs: Prediction-Interval-Conditional Prediction Intervals</h5>
+                                <h6 class="authors">
+                                    <u>Xuelin Yang*</u>, <a href="https://scholar.google.com/citations?user=chICXXMAAAAJ&hl=en">Baihe Huang</a>*,
+                                    <a href="https://ctml.berkeley.edu/people/yilong-hou">Yilong Hou</a>*,
+                                    <a href="https://gsb-faculty.stanford.edu/guido-w-imbens">Guido W. Imbens</a>,
+                                    <a href="https://people.eecs.berkeley.edu/~jordan/">Michael I. Jordan</a>
+                                    
+                                </h6>
+                                <p class="info">
+                                    [<a href="https://arxiv.org/abs/2609.25388">Paper</a> / <a href="https://github.com/xyang23/picpi">Code</a>] 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 
                 <div class="pub-card" data-topic="causal-inference" data-year="2025" data-selected="true">
